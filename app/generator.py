@@ -1,5 +1,6 @@
 import numpy as np
 import random
+from random import sample
 
 qtde_num = {
     "impar": 7,
@@ -8,11 +9,18 @@ qtde_num = {
 
 def gerar_numeros(qtde_combinacoes):
     combinacoes = []
-    jogo = []
+    
     for combinacao in range(qtde_combinacoes):
-        for numero_par in range(qtde_num.par):
-             numero = random.randint(1,25,2)
-             jogo.append(numero)
-        for numero_impar in range(qtde_num.impar):
-            numero = random.randint(1,26)
+        
+        for i in range(qtde_combinacoes):
+            jogo = []
+            sorteados = sample(range(1, 26), 15)
+            sorteados.sort()
+            jogo.append(sorteados)
+
+        combinacoes.append(jogo)
+    print(combinacoes)
             
+
+
+gerar_numeros(5)
