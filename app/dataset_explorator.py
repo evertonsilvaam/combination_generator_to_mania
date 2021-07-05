@@ -14,7 +14,7 @@ def more_frequence(dataframe):
     good_numbers = []
     bad_numbers = []
     best_numbers = []
-    worse_numbers = []
+    #worse_numbers = []
     #print(size)
     #print(dataframe.iloc[[0]]["bola 15"])
     #for linha in range(size):
