@@ -7,6 +7,7 @@ qtde_num = {
     "par": 8
 }
 
+#gera lista com 15 números aleatórios de 1 a 25
 def gerar_numeros(qtde_combinacoes):
     combinacoes = []
     

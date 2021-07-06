@@ -1,6 +1,11 @@
 import pandas as pd
 
-dataframe = pd.read_excel("resultados.xlsx")
+def read_dataframe():
+    dataframe = pd.read_excel("resultados.xlsx")
+    #print(dataframe.head())
+    return dataframe
+
+#dataframe = read_dataframe()
 
 args = {
     "max" : 107,
@@ -14,7 +19,7 @@ def more_frequence(dataframe):
     good_numbers = []
     bad_numbers = []
     best_numbers = []
-    #worse_numbers = []
+    worse_numbers = []
     #print(size)
     #print(dataframe.iloc[[0]]["bola 15"])
     #for linha in range(size):
@@ -52,9 +57,12 @@ def more_frequence(dataframe):
         if i in good_numbers:
             good_numbers.remove(i)
             best_numbers.append(i)
+        else:
+            worse_numbers.append(i)
             
     print("Good Numbers:", good_numbers)
     print("Best Numbers:", best_numbers)
+    print("Worse Numbers:", worse_numbers)
     #teste = good_numbers.remove(i for i in bad_numbers)
 
     #print("real:", good_numbers - bad_numbers)
@@ -62,4 +70,23 @@ def more_frequence(dataframe):
         #    if (valores.value>100):
         #        print(valores.index)
 
-more_frequence(dataframe)
+    """
+    01	02	05	07	08
+    10	11	13	14	15
+    16	18	21	22	24
+
+    """
+
+#more_frequence(dataframe)
+
+def include_competition(dataframe, index, date, numbers, label):
+    print(dataframe)
+
+
+def include_win_cols(dataframe):
+    dataframe['label'] = 1
+    print(dataframe.head())
+
+#include_win_cols(dataframe)
+
+#include_competition(dataframe, 2261, "03/07/2021", [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15], 0)
