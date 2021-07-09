@@ -5,7 +5,7 @@ def read_dataframe():
     #print(dataframe.head())
     return dataframe
 
-#dataframe = read_dataframe()
+dataframe = read_dataframe()
 
 args = {
     "max" : 107,
@@ -77,7 +77,7 @@ def more_frequence(dataframe):
 
     """
 
-#more_frequence(dataframe)
+more_frequence(dataframe)
 
 def include_competition(dataframe, index, date, numbers, label):
     print(dataframe)
